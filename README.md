@@ -13,6 +13,8 @@ A stunning, animated hero section for a **Legal Work Management Platform** — b
 
 </div>
 
+Live Demo - [Link](https://round-1-assignments-sahil.vercel.app/)
+
 ---
 
 ## 📋 Table of Contents
