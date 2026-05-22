@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import Image from "next/image";
+
 
 interface PortalCardProps {
   name: string;
@@ -22,7 +22,7 @@ export function PortalCard({
     <div className="flex items-start gap-3">
       {/* Avatar */}
       <div className="w-10 h-10 rounded-full shrink-0 overflow-hidden mt-0.5">
-        <Image
+        <img
           src={avatarUrl}
           alt={name}
           width={40}
