@@ -1,0 +1,110 @@
+@import "tailwindcss";
+
+:root {
+  --background: #f5f5fa;
+  --foreground: #1a1a2e;
+  --accent-blue: #4f46e5;
+  --accent-orange: #f59e0b;
+  --accent-dark: #1e1b3a;
+  --accent-purple: #6c5ce7;
+  --card-bg: #ffffff;
+  --blob-color: rgba(199, 210, 254, 0.5);
+  --text-muted: #6b7280;
+}
+
+.dark {
+  --background: #0f0d1a;
+  --foreground: #e8e6f0;
+  --accent-blue: #6366f1;
+  --accent-orange: #fbbf24;
+  --accent-dark: #2d2a4a;
+  --accent-purple: #8b7cf7;
+  --card-bg: #1a1730;
+  --blob-color: rgba(99, 102, 241, 0.15);
+  --text-muted: #9ca3af;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-accent-blue: var(--accent-blue);
+  --color-accent-orange: var(--accent-orange);
+  --color-accent-dark: var(--accent-dark);
+  --color-accent-purple: var(--accent-purple);
+  --color-card-bg: var(--card-bg);
+  --color-blob: var(--blob-color);
+  --color-text-muted: var(--text-muted);
+  --font-sans: var(--font-plus-jakarta), "Plus Jakarta Sans", system-ui,
+    sans-serif;
+
+  --animate-float-slow: float-slow 8s ease-in-out infinite;
+  --animate-float-medium: float-medium 6s ease-in-out infinite;
+  --animate-float-fast: float-fast 5s ease-in-out infinite;
+  --animate-blob: blob 7s infinite;
+}
+
+@keyframes float-slow {
+  0%,
+  100% {
+    transform: translateY(0px) rotate(var(--tw-rotate));
+  }
+  50% {
+    transform: translateY(-12px) rotate(var(--tw-rotate));
+  }
+}
+
+@keyframes float-medium {
+  0%,
+  100% {
+    transform: translateY(0px) rotate(var(--tw-rotate));
+  }
+  50% {
+    transform: translateY(-18px) rotate(var(--tw-rotate));
+  }
+}
+
+@keyframes float-fast {
+  0%,
+  100% {
+    transform: translateY(0px) rotate(var(--tw-rotate));
+  }
+  50% {
+    transform: translateY(-10px) rotate(var(--tw-rotate));
+  }
+}
+
+@keyframes blob {
+  0% {
+    transform: translate(0px, 0px) scale(1);
+  }
+  33% {
+    transform: translate(30px, -20px) scale(1.1);
+  }
+  66% {
+    transform: translate(-10px, 10px) scale(0.9);
+  }
+  100% {
+    transform: translate(0px, 0px) scale(1);
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Smooth scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--background);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--accent-blue);
+  border-radius: 4px;
+}
